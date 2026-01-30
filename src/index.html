@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./style/style.css" />
+  <title>Projeto inicial</title>
+ </head>
+ <body>
+  <h1 class="title">ORÇAMENTO</h1>
+  <main class="order">
+   <form class="order__information">
+    <span class="order__information-CampInput">
+     <label for="name-client">Nome do Cliente</label>
+     <input
+      id="name-client"
+      placeholder="Escreva o nome do cliente"
+      type="text"
+     />
+    </span>
+    <div class="order__information-dobleInput">
+     <span class="order__information-CampInput date">
+      <label for="date-now">Data de Hoje</label>
+      <input id="date-now" type="date" />
+     </span>
+     <span class="order__information-CampInput phone">
+      <label for="phone-client">Telefone</label>
+      <input
+       id="phone-client"
+       placeholder="Escreva o Numero de Telefone cliente"
+       type="text"
+      />
+     </span>
+    </div>
+    <hr class="order__separator" />
+    <button class="order__buttonAdd">ADICIONAR PEDIDO</button>
+    <table class="order__itensTables">
+      <thead>
+        <tr>
+          <th>QTND</th>
+          <th>PRODUTO</th>
+          <th>DESCRIÇÃO TÉCNICA</th>
+          <th>VALOR UNIT (R$)</th>
+          <th>VALOR TOTAL (R$)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td colspan="5">NENHUM ITEM ADICIONADO</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th colspan="4">TOTAL: </th>
+          <td>R$  0,00</td>
+        </tr>
+      </tfoot>
+    </table>
+   </form>
+  </main>
+ </body>
+</html>
