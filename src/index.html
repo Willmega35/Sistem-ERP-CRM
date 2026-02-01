@@ -35,28 +35,83 @@
     <hr class="order__separator" />
     <button class="order__buttonAdd">ADICIONAR PEDIDO</button>
     <table class="order__itensTables">
-      <thead>
-        <tr>
-          <th>QTND</th>
-          <th>PRODUTO</th>
-          <th>DESCRIÇÃO TÉCNICA</th>
-          <th>VALOR UNIT (R$)</th>
-          <th>VALOR TOTAL (R$)</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td colspan="5">NENHUM ITEM ADICIONADO</td>
-        </tr>
-      </tbody>
-      <tfoot>
-        <tr>
-          <th colspan="4">TOTAL: </th>
-          <td>R$  0,00</td>
-        </tr>
-      </tfoot>
+     <thead>
+      <tr>
+       <th>QTND</th>
+       <th>PRODUTO</th>
+       <th>DESCRIÇÃO TÉCNICA</th>
+       <th>VALOR UNIT (R$)</th>
+       <th>VALOR TOTAL (R$)</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td colspan="5">NENHUM ITEM ADICIONADO</td>
+      </tr>
+     </tbody>
+     <tfoot>
+      <tr>
+       <th colspan="4">TOTAL:</th>
+       <td>R$ 0,00</td>
+      </tr>
+     </tfoot>
     </table>
    </form>
   </main>
+  <dialog class="logAddrequest">
+   <header class="logAddrequest__header">
+    <h2 class="logAddrequest__header-title">Adicionar Produto</h2>
+    <span class="logAddrequest__header-quit">
+     <img src="assets/Quit.svg" alt="Quit-button" />
+    </span>
+   </header>
+   <hr class="logAddrequest__separator" />
+   <form class="logAddrequest__itemRequest">
+    <span class="logAddrequest__itemRequest-camp">
+     <label for="name-request">Produto:</label>
+     <input
+      id="name-request"
+      type="text"
+      placeholder="Escreva no nome do produto"
+     />
+    </span>
+    <span class="logAddrequest__itemRequest-camp">
+     <label for="name-request">Descrição:</label>
+     <input
+      id="name-request"
+      type="text"
+      placeholder="Escreva no nome do produto"
+     />
+    </span>
+    <div class="logAddrequest__itemRequest-quantilyPrice">
+     <!-- <label for="quantily-number"></label> -->
+     <div class="quantilyPrice__quantily">
+      <label for="quantily-number">Quantidade:</label>
+      <span class="quantily">
+       <button>-</button>
+       <input id="quantily-number" type="text" value="0" />
+       <button>+</button>
+      </span>
+     </div>
+
+     <span class="quantilyPrice__price">
+      <label for="price-number">Valor Unitario (RS):</label>
+      <input id="price-number" type="text" />
+     </span>
+    </div>
+    <hr class="logAddrequest__itemRequest-saparaitor">
+    <div class="logAddrequest__itemRequest-outputResult">
+      <span class="outputResult__text">Total:</span>
+      <output id="result-request">R$ 0,00</output>
+    </div>
+    <hr>
+    <div class="logAddRequest__itemRequest-buttons">
+      <button id="button-cancel">Cancelar</button>
+      <button id="button-add">Adicionar</button>
+    </div>
+   </form>
+  </dialog>
+
+  <script src="index.ts" defer></script>
  </body>
 </html>
