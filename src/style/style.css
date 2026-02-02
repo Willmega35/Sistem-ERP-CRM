@@ -27,3 +27,7 @@ body {
  background-color: rgba(0, 0, 0, 0.6);
  background-blend-mode: overlay;
 }
+
+.title {
+ font: 700 4em var(--font-google);
+}
