@@ -12,7 +12,17 @@
  font-size: 16px;
 }
 
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: content-box;
+}
+
 body {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ height: 100dvh;
  background: center/50vw url('../assets/43118.jpg');
  background-color: rgba(0, 0, 0, 0.6);
  background-blend-mode: overlay;
