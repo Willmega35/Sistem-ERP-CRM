@@ -20,6 +20,7 @@
 
 body {
  display: flex;
+ flex-direction: column;
  justify-content: center;
  align-items: center;
  height: 100dvh;
@@ -30,4 +31,11 @@ body {
 
 .title {
  font: 700 4em var(--font-google);
+}
+
+.containerRequest {
+ padding: 1em 2em;
+ border-radius: 15px;
+ box-shadow: 5px -5px rgba(0, 0, 0, 0.4);
+ background-color: var(--color-04);
 }
