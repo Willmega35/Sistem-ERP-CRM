@@ -61,11 +61,15 @@ body {
 
 .orderRequest__dobleCamp {
  margin-top: 1.5em;
- margin-inline: 1em .5em;
+ margin-inline: .5em;
  display: flex;
  gap: 2em;
 
- & .date {
+ & .orderRequest__Camp:first-child>input {
+  width: 10em;
+ }
+
+ & .orderRequest__Camp:last-child {
   flex-grow: 2;
  }
 }
