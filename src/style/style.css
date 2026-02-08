@@ -1,79 +1,83 @@
 @import url("https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap");
 
 :root {
- --font-google: "Google Sans", sans-serif;
- --color-01: #1b3c53;
- --color-02: #234c6a;
- --color-03: #456882;
- --color-04: #d2c1b6;
- --color-05: #f1f1f1;
- --color-backgr1: #d9d9d9;
+  --font-google: "Google Sans", sans-serif;
+  --color-01: #1b3c53;
+  --color-02: #234c6a;
+  --color-03: #456882;
+  --color-04: #d2c1b6;
+  --color-05: #f1f1f1;
+  --color-backgr1: #d9d9d9;
 
- font-size: 16px;
+  font-size: 16px;
 }
 
 * {
- margin: 0;
- padding: 0;
- box-sizing: content-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
 }
 
 body {
- display: flex;
- flex-direction: column;
- justify-content: center;
- align-items: center;
- height: 100dvh;
- background: center/50vw url('../assets/43118.jpg');
- background-color: rgba(0, 0, 0, 0.6);
- background-blend-mode: overlay;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100dvh;
+  background: center/50vw url("../assets/43118.jpg");
+  background-color: rgba(0, 0, 0, 0.6);
+  background-blend-mode: overlay;
 }
 
 .title {
- font: 700 4em var(--font-google);
+  font: 700 4em var(--font-google);
 }
 
 .containerRequest {
- width: 50vw;
- padding: 4em 2em;
- border-radius: 15px;
- box-shadow: 5px -5px rgba(0, 0, 0, 0.4);
- background-color: var(--color-04);
+  width: 50vw;
+  padding: 4em 2em;
+  border-radius: 15px;
+  box-shadow: 5px -5px rgba(0, 0, 0, 0.4);
+  background-color: var(--color-04);
+
+  & .containerRequest__separator {
+    margin-block: 1.5em 0.5em;
+  }
 }
 
 .orderRequest__Camp {
- display: flex;
- flex-direction: column;
+  display: flex;
+  flex-direction: column;
 
- & label {
-  margin-left: 10px;
-  font: 700 1.25em var(--font-google);
-  text-transform: uppercase;
- }
+  & label {
+    margin-left: 10px;
+    font: 700 1.25em var(--font-google);
+    text-transform: uppercase;
+  }
 
- & input {
-  padding: 8px 5px 3px 5px;
-  border-radius: 10px;
-  font: 400 1.5em var(--font-google);
- }
+  & input {
+    padding: 8px 5px 3px 5px;
+    border-radius: 10px;
+    font: 400 1.5em var(--font-google);
+  }
 
- & input::placeholder {
-  font: italic 300 1em var(--font-google);
-  letter-spacing: 2px;
- }
+  & input::placeholder {
+    font: italic 300 1em var(--font-google);
+    letter-spacing: 2px;
+  }
 }
 
 .orderRequest__dobleCamp {
- margin-top: 1.5em;
- margin-inline: .5em;
- display: flex;
- gap: 2em;
+  margin-top: 1.5em;
+  margin-inline: 0.5em;
+  display: flex;
+  gap: 2em;
 
- & .orderRequest__Camp:first-child>input {
-  width: 10em;
- }
+  & .orderRequest__Camp:first-child > input {
+    width: 10em;
+  }
 
- & .orderRequest__Camp:last-child {
-  flex-grow: 2;
- }
+  & .orderRequest__Camp:last-child {
+    flex-grow: 2;
+  }
 }
