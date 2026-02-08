@@ -1,3 +1,5 @@
+const inputPhone = document.getElementById("phone-client");
+
 function masckPhone(value) {
   let phone = value.replace(/\D/g, "");
 
@@ -8,3 +10,7 @@ function masckPhone(value) {
 
   return phone;
 }
+
+inputPhone.addEventListener("input", (event) => {
+  event.target.value = masckPhone(event.target.value);
+});
