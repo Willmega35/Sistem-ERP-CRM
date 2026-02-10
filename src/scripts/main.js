@@ -1,4 +1,7 @@
 const inputPhone = document.getElementById("phone-client");
+/** @type { HTMLDialogElement } */
+const modalRequest = document.getElementById('add-request');
+const buttonModalrequest = document.querySelector('.containerRequest__buttonAddRequest')
 
 function masckPhone(value) {
   let phone = value.replace(/\D/g, "");
@@ -14,3 +17,8 @@ function masckPhone(value) {
 inputPhone.addEventListener("input", (event) => {
   event.target.value = masckPhone(event.target.value);
 });
+
+buttonModalrequest.addEventListener('click', (event) => {
+  event.preventDefault();
+  modalRequest.showModal();
+})
