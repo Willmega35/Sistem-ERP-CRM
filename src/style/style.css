@@ -142,3 +142,19 @@ dialog{
   margin: auto;
   padding: 1em 2em;
 }
+
+#add-request{
+  max-width: 80vw;
+  padding: 1.5em 2.5em;
+
+  & .headerModal {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25vw;
+
+    & h3 {
+      font: 700 1.7em var(--font-google);
+    }
+  }
+}
