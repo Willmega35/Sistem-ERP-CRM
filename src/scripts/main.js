@@ -2,6 +2,7 @@ const inputPhone = document.getElementById("phone-client");
 /** @type { HTMLDialogElement } */
 const modalRequest = document.getElementById('add-request');
 const buttonModalrequest = document.querySelector('.containerRequest__buttonAddRequest')
+const buttonCloseModal = document.querySelector('#add-request>header>img')
 
 function masckPhone(value) {
   let phone = value.replace(/\D/g, "");
@@ -22,3 +23,5 @@ buttonModalrequest.addEventListener('click', (event) => {
   event.preventDefault();
   modalRequest.showModal();
 })
+
+buttonCloseModal.addEventListener('click', () => modalRequest.close())
