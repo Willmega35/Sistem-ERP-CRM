@@ -196,7 +196,7 @@ dialog {
 
  & .form__dublePropert {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   gap: 1em;
 
   & .form__dublePropert-quantily {
@@ -242,5 +242,27 @@ dialog {
   & .form__dublePropert-quantily > input::placeholder {
    font: italic 400 1em var(--font-google);
   }
+
+  & .form__dublePropert-price {
+    display: flex;
+    align-items: center;
+    gap: .5em;
+
+    & label {
+      font: 600 1.5em var(--font-google);
+    }
+
+    & input {
+      width: 10rem;
+      padding: 0.25em 0.5em;
+      border: none;
+      border-radius: 12px;
+      font: 500 1.5em var(--font-google);
+    }
+
+    & input::placeholder {
+      font: italic 400 1em var(--font-google);
+    }
  }
+}
 }
