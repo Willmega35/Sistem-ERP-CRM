@@ -6,6 +6,8 @@ const buttonCloseModal = document.querySelector('#add-request>header>img')
 
 const addRequestquantity = document.querySelector('.quantity-produt__container');
 
+const inputFormartPrice = document.getElementById('value-produt');
+
 function masckPhone(value) {
   let phone = value.replace(/\D/g, "");
 
@@ -39,3 +41,11 @@ addRequestquantity.addEventListener('click', (event) => {
     event.target.parentElement.querySelector('input').value = parseInt(inputQuantity) + 1;
   }
 })
+
+inputFormartPrice.addEventListener('input', (event) => {
+  let value = event.target.value.replace(/\D/g, "");
+  value = (value / 100).toFixed(2) + "";
+  value = value.replace(".", ",");
+  value = value.replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1.");
+  event.target.value = "R$ " + value;
+});
