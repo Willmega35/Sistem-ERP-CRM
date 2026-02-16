@@ -144,6 +144,7 @@ dialog{
 }
 
 #add-request{
+  background-color: var(--color-backgr1);
   max-width: 80vw;
   padding: 1.5em 1em;
 
@@ -162,4 +163,35 @@ dialog{
   & .separator {
     margin-block: 1em;
   }
+}
+
+.addRequest__form{
+  display: flex;
+  flex-direction: column;
+  gap: 1.75em;
+
+  & .form__camp {
+    display: grid;
+    grid-template-columns: 10em 1fr;
+    align-items: center;
+    gap: 1em;
+
+    & label{
+      text-align: end;
+      font: 600 1.5em var(--font-google);
+    }
+
+    & input{
+      width: calc(100% - 2em);
+      padding: .25em .5em;
+      border: none;
+      border-radius: 12px;
+      font: 500 1.5em var(--font-google);
+    } 
+    
+    & input::placeholder {
+      font: italic 400 1em var(--font-google);
+    }
+  }
+
 }
