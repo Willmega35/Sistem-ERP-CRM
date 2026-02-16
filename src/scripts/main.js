@@ -4,6 +4,8 @@ const modalRequest = document.getElementById('add-request');
 const buttonModalrequest = document.querySelector('.containerRequest__buttonAddRequest')
 const buttonCloseModal = document.querySelector('#add-request>header>img')
 
+const addRequestquantity = document.querySelector('.quantity-produt__container');
+
 function masckPhone(value) {
   let phone = value.replace(/\D/g, "");
 
@@ -25,3 +27,15 @@ buttonModalrequest.addEventListener('click', (event) => {
 })
 
 buttonCloseModal.addEventListener('click', () => modalRequest.close())
+
+addRequestquantity.addEventListener('click', (event) => {
+  const typeDatabutton = event.target.dataset.type
+  const inputQuantity = event.target.parentElement.querySelector('input').value
+
+  if (typeDatabutton === 'decrement') {
+    event.target.parentElement.querySelector('input').value = parseInt(inputQuantity) - 1;
+  }
+  if (typeDatabutton === 'increment') {
+    event.target.parentElement.querySelector('input').value = parseInt(inputQuantity) + 1;
+  }
+})
