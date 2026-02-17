@@ -1,0 +1,51 @@
+/* ======== Estilização principal do Tabela de produtos ======= */
+.containerRequest__table {
+ margin-top: 2em;
+ margin-inline: auto;
+ border-collapse: collapse;
+
+ /* Estilização para itens de titulo e de conteudo */
+ & th,
+ & td {
+  padding: 0.5em 1.5em;
+  border: 1px solid #000;
+ }
+
+ /* Estilizaçãp do com relação ao titulo dos itens */
+ & th {
+  background-color: var(--color-backgr1);
+  font: 200 1.5em var(--font-google);
+ }
+
+ /* Estilização com relação ao itens da Lista */
+ & td {
+  border: 1px solid #000;
+ }
+
+ /* Estilização da mensagem de Lista vazia */
+ & td[colspan="5"] {
+  background-color: var(--color-backgr2);
+  font: 700 2em var(--font-google);
+  color: var(--color-05);
+  text-align: center;
+ }
+
+ /* Estilização rodapé da tabela */
+ & tfoot {
+  background-color: var(--color-backgr1);
+ }
+
+ /* Estilização do titulo do rodapé */
+ & tfoot > tr > td:first-child {
+  padding-right: 0.5em;
+  font: 600 2em var(--font-google);
+  text-align: end;
+  text-transform: uppercase;
+ }
+
+ /* Estilização do resultado total dos itens lista */
+ & tfoot > tr > td:last-child {
+  font: 500 1.5em var(--font-google);
+  padding-left: 0.5em;
+ }
+}
