@@ -279,4 +279,30 @@ dialog {
    font: 500 4em var(--font-google);
   }
  }
+
+ & .form__buttons {
+  display: flex;
+  justify-content: end;
+  gap: 1em;
+
+  & .form__buttons-cancel {
+   padding: .5em 1em;
+   border: none;
+   border-radius: 0.5em;
+   background-color: #ff2d55;
+   color: var(--color-05);
+   font: italic 300 1.5em var(--font-google);
+   text-transform: uppercase;
+  }
+
+  & .form__buttons-confirm {
+   padding: .5em 1em;
+   border: none;
+   border-radius: 0.5em;
+   background-color: var(--color-02);
+   color: var(--color-05);
+   font: italic 300 1.5em var(--font-google);
+   text-transform: uppercase;
+  }
+ }
 }
