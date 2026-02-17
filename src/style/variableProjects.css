@@ -1,0 +1,44 @@
+/* Criando escopo de vaiaveis para passar no projeto */
+/* Para isso será utilizado uma função mova do CSS @property */
+
+@property --color-01 {
+ syntax: "<color>";
+ inherits: true;
+ initial-value: #1b3c53;
+}
+
+@property --color-02 {
+ syntax: "<color>";
+ inherits: true;
+ initial-value: #234c6a;
+}
+
+@property --color-03 {
+ syntax: "<color>";
+ inherits: true;
+ initial-value: #456882;
+}
+
+@property --color-04 {
+ syntax: "<color>";
+ inherits: true;
+ initial-value: #d2c1b6;
+}
+
+@property --color-05 {
+ syntax: "<color>";
+ inherits: true;
+ initial-value: #f1f1f1;
+}
+
+@property --color-backgr1 {
+ syntax: "<color>";
+ inherits: true;
+ initial-value: #d9d9d9;
+}
+
+@property --color-backgr2 {
+ syntax: "<color>";
+ inherits: true;
+ initial-value: #a1a1a1;
+}
