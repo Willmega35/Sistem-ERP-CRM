@@ -2,6 +2,7 @@
 
 /* Importes des Components CSS */
 @import url("variableProjects.css");
+@import url("./components/forms-request.css");
 
 :root {
  --font-google: "Google Sans", sans-serif;
@@ -24,70 +25,6 @@ body {
  background: center/50vw url("../assets/43118.jpg");
  background-color: rgba(0, 0, 0, 0.6);
  background-blend-mode: overlay;
-}
-
-.title {
- font: 700 4em var(--font-google);
-}
-
-.containerRequest {
- width: 60vw;
- padding: 4em 2em;
- border-radius: 15px;
- box-shadow: 5px -5px rgba(0, 0, 0, 0.4);
- background-color: var(--color-04);
-
- & .containerRequest__separator {
-  margin-block: 1.5em 0.5em;
- }
-
- & .containerRequest__buttonAddRequest {
-  padding: 1em 1.75em;
-  border: none;
-  border-radius: 0.5em;
-  margin-left: calc(90% - 8rem);
-  background-color: var(--color-02);
-  color: var(--color-05);
-  font: 700 1em var(--font-google);
-  text-transform: uppercase;
- }
-}
-
-.orderRequest__Camp {
- display: flex;
- flex-direction: column;
-
- & label {
-  margin-left: 10px;
-  font: 700 1.25em var(--font-google);
-  text-transform: uppercase;
- }
-
- & input {
-  padding: 8px 5px 3px 5px;
-  border-radius: 10px;
-  font: 400 1.5em var(--font-google);
- }
-
- & input::placeholder {
-  font: italic 300 1em var(--font-google);
-  letter-spacing: 2px;
- }
-}
-
-.orderRequest__dobleCamp {
- margin-top: 1.5em;
- margin-inline: 0.5em;
- display: flex;
- gap: 2em;
-
- & .orderRequest__Camp:first-child > input {
-  width: 10em;
- }
-
- & .orderRequest__Camp:last-child {
-  flex-grow: 2;
- }
 }
 
 .containerRequest__table {

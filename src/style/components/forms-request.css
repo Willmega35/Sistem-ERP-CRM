@@ -1,0 +1,76 @@
+/* Estilização da pagina principal */
+/* ========= Estililização do titulo principal ============= */
+.title {
+ font: 700 4em var(--font-google);
+}
+
+/* ========= Estililização do Container principal ============= */
+.containerRequest {
+ width: 60vw;
+ padding: 4em 2em;
+ border-radius: 15px;
+ margin-top: 1em;
+ box-shadow: 5px -5px rgba(0, 0, 0, 0.4);
+ background-color: var(--color-04);
+
+ /* Estilização do ceparador central do do conteudo principal com tabela */
+ & .containerRequest__separator {
+  margin-block: 1.5em 0.5em;
+ }
+
+ /* Estilização do Botão de adicionar item */
+ & .containerRequest__buttonAddRequest {
+  padding: 1em 1.75em;
+  border: none;
+  border-radius: 0.5em;
+  margin-left: calc(90% - 8rem);
+  background-color: var(--color-02);
+  color: var(--color-05);
+  font: 700 1em var(--font-google);
+  text-transform: uppercase;
+ }
+}
+
+/* ========= Estilização dos Campos principais =========  */
+.orderRequest__Camp {
+ display: flex;
+ flex-direction: column;
+
+ /* Estilização do Label do campo */
+ & label {
+  margin-left: 10px;
+  font: 700 1.25em var(--font-google);
+  text-transform: uppercase;
+ }
+
+ /* Estilização do campo */
+ & input {
+  padding: 8px 5px 3px 5px;
+  border-radius: 10px;
+  font: 400 1.5em var(--font-google);
+ }
+
+ /* Estilização do placeholder do campo */
+ & input::placeholder {
+  font: italic 300 1em var(--font-google);
+  letter-spacing: 2px;
+ }
+}
+
+/* ====== Estilização da sessão do dois campos ======== */
+.orderRequest__dobleCamp {
+ margin-top: 1.5em;
+ margin-inline: 0.5em;
+ display: flex;
+ gap: 2em;
+
+ /* Controlando o comprimento do 1º input */
+ & .orderRequest__Camp:first-child > input {
+  width: 10em;
+ }
+
+/* Estendendo o campo de contato com tamanho maior */
+ & .orderRequest__Camp:last-child {
+  flex-grow: 2;
+ }
+}
