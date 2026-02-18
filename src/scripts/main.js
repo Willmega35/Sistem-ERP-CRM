@@ -1,4 +1,5 @@
-const inputPhone = document.getElementById("phone-client");
+import "./core/MaskValue.js"
+
 /** @type { HTMLDialogElement } */
 const modalRequest = document.getElementById('add-request');
 const buttonModalrequest = document.querySelector('.containerRequest__buttonAddRequest')
@@ -7,21 +8,6 @@ const buttonCloseModal = document.querySelector('#add-request>header>img')
 const addRequestquantity = document.querySelector('.quantity-produt__container');
 
 const inputFormartPrice = document.getElementById('value-produt');
-
-function masckPhone(value) {
-  let phone = value.replace(/\D/g, "");
-
-  phone = phone.replace(/^(\d{2})(\d)/g, "($1) $2");
-  phone = phone.replace(/(\d{5})(\d)/, "$1-$2");
-
-  phone = phone.substring(0, 15);
-
-  return phone;
-}
-
-inputPhone.addEventListener("input", (event) => {
-  event.target.value = masckPhone(event.target.value);
-});
 
 buttonModalrequest.addEventListener('click', (event) => {
   event.preventDefault();
