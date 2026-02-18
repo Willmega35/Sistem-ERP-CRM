@@ -1,0 +1,173 @@
+/* ============= Estilização do Dialog Add de pedidos ============= */
+#add-request {
+ background-color: var(--color-backgr1);
+ max-width: 80vw;
+ padding: 1.5em 1em;
+
+ /* Estilização do cabeçalho do modal */
+ & .headerModal {
+  padding-inline: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25vw;
+
+  /* Estilização do Titulo do cabeçalho */
+  & h3 {
+   font: 700 1.7em var(--font-google);
+  }
+ }
+
+ /* Estilização do divisor da função */
+ & .separator {
+  margin-block: 1em;
+ }
+}
+
+/* ================ Estilização do formulario de Cadastro ================ */
+.addRequest__form {
+ display: flex;
+ flex-direction: column;
+ gap: 1.75em;
+
+ /* Estilização principal do campos  */
+ & .form__camp {
+  display: grid;
+  grid-template-columns: 10em 1fr;
+  align-items: center;
+  gap: 1em;
+
+  & label {
+   text-align: end;
+   font: 600 1.5em var(--font-google);
+  }
+
+  & input {
+   width: calc(100% - 2em);
+   padding: 0.25em 0.5em;
+   border: none;
+   border-radius: 12px;
+   font: 500 1.5em var(--font-google);
+  }
+
+  & input::placeholder {
+   font: italic 400 1em var(--font-google);
+  }
+ }
+
+ /* Estilização dos campos principais de Quantidade e Preco*/
+ & .form__dublePropert {
+  display: flex;
+  justify-content: space-around;
+  gap: 1em;
+
+  & .form__dublePropert-quantily {
+   display: flex;
+   align-items: center;
+   gap: 0.5em;
+  }
+
+  & .form__dublePropert-quantily > label {
+   font: 600 1.5em var(--font-google);
+  }
+
+  & .form__dublePropert-quantily > .quantity-produt__container {
+   display: flex;
+  }
+
+  & .form__dublePropert-quantily > .quantity-produt__container button {
+   padding: 1em 0.75em;
+   border: none;
+   background-color: var(--color-02);
+   color: var(--color-05);
+
+   &:first-child {
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+   }
+
+   &:last-child {
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+   }
+  }
+
+  & .form__dublePropert-quantily > .quantity-produt__container input {
+   width: 5rem;
+   padding: 0.25em 0.5em;
+   border: none;
+   font: 500 1.5em var(--font-google);
+   text-align: center;
+   appearance: textfield;
+  }
+
+  & .form__dublePropert-quantily > input::placeholder {
+   font: italic 400 1em var(--font-google);
+  }
+
+  & .form__dublePropert-price {
+   display: flex;
+   align-items: center;
+   gap: 0.5em;
+
+   & label {
+    font: 600 1.5em var(--font-google);
+   }
+
+   & input {
+    width: 10rem;
+    padding: 0.25em 0.5em;
+    border: none;
+    border-radius: 12px;
+    font: 500 1.5em var(--font-google);
+   }
+
+   & input::placeholder {
+    font: italic 400 1em var(--font-google);
+   }
+  }
+ }
+
+ /* Estilização do resutado do formulario */
+ & .form__result {
+  display: flex;
+  align-items: top;
+  justify-content: end;
+  gap: 1em;
+
+  & span {
+   font: italic 700 2em var(--font-google);
+  }
+
+  & output {
+   font: 500 4em var(--font-google);
+  }
+ }
+
+ /* Estelização dos buttões e do formulario */
+ & .form__buttons {
+  display: flex;
+  justify-content: end;
+  gap: 1em;
+
+  & .form__buttons-cancel {
+   padding: .5em 1em;
+   border: none;
+   border-radius: 0.5em;
+   background-color: #ff2d55;
+   color: var(--color-05);
+   font: italic 300 1.5em var(--font-google);
+   text-transform: uppercase;
+  }
+
+  & .form__buttons-confirm {
+   padding: .5em 1em;
+   border: none;
+   border-radius: 0.5em;
+   background-color: var(--color-02);
+   color: var(--color-05);
+   font: italic 300 1.5em var(--font-google);
+   text-transform: uppercase;
+  }
+ }
+}
