@@ -1,7 +1,6 @@
 const modalRequest = document.getElementById('add-request');
 const buttonModalrequest = document.querySelector('.containerRequest__buttonAddRequest')
 const buttonCloseModal = document.querySelector('#add-request>header>img')
-
 const addRequestquantity = document.querySelector('.quantity-produt__container');
 
 const inputFormartPrice = document.getElementById('value-produt');
@@ -11,7 +10,15 @@ buttonModalrequest.addEventListener('click', (event) => {
   modalRequest.showModal();
 })
 
-buttonCloseModal.addEventListener('click', () => modalRequest.close())
+buttonCloseModal.addEventListener('click', () => {
+  // modalRequest.close()
+  modalRequest.classList.add('close-Dialog');
+
+  modalRequest.addEventListener('animationend', () => {
+    modalRequest.classList.remove('close-Dialog');
+    modalRequest.close()
+  }, {once: true})
+})
 
 addRequestquantity.addEventListener('click', (event) => {
   const typeDatabutton = event.target.dataset.type
